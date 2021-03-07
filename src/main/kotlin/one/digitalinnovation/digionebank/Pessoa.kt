@@ -3,7 +3,8 @@ package one.digitalinnovation.digionebank
 
 class Pessoa {
     var nome: String = "Rubens Souza"
-    var cpf: String = "196.196.106-80"
+    var cpf: String = "196.196.106-80" // Seria alterável
+    private set // Protege contra alterações.
 
     inner class Endereco {
         var rua: String = "Rua São Paulo"
@@ -14,7 +15,9 @@ class Pessoa {
 
 fun main() {
     val john = Pessoa()
+    //john.cpf = "192.192.292-90"  // private set impede de isso ser aceito
 
+    println(john)
     println(john.nome)
     println(john.cpf)
     println(john.Endereco().rua +", " + john.Endereco().nro)
