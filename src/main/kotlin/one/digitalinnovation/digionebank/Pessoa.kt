@@ -6,7 +6,7 @@ class Pessoa {
     var cpf: String = "196.196.106-80" // Seria alterável
     private set // Protege contra alterações.
 
-    constructor() //construtor padrão
+    constructor() //construtor primário
 
     fun pessoalInfo() = "$nome e $cpf"
 
