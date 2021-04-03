@@ -1,13 +1,14 @@
 //Curso Kotlin DIO
 package one.digitalinnovation.digionebank
 
-class Pessoa {
-    var nome: String = "Rubens Souza"
-    var cpf: String = "196.196.106-80" // Seria alterável
-    private set // Protege contra alterações.
+abstract class Pessoa(
+    val nome: String,
+    val cpf: String
+) {
+/*    private set // Protege contra alterações.
 
     constructor() //construtor primário
-
+*/
     fun pessoalInfo() = "$nome e $cpf"
 
     inner class Endereco {
@@ -17,17 +18,3 @@ class Pessoa {
 
 }
 
-fun main() {
-    val john = Pessoa()
-    //john.cpf = "192.192.292-90"  // private set impede de isso ser aceito
-
-    println(john)
-    println(john.nome)
-    println(john.cpf)
-    println(john.Endereco().rua +", " + john.Endereco().nro)
-
-    println(john.pessoalInfo())
-
-    val rubens = Pessoa()
-    println(rubens.pessoalInfo())
-}
