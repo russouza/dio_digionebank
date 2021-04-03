@@ -10,7 +10,7 @@ abstract class Funcionario(
 
     protected abstract fun calculaAuxilio(): Double
     override fun toString(): String = """
-        Nome: $nome
+        $nome
         CPF: $cpf
         Salario: $salario
         Auxilio: ${calculaAuxilio()}

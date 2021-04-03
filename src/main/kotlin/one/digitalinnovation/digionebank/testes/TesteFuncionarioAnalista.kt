@@ -12,10 +12,8 @@ fun main() {
     println(joao.cpf)
     println(joao.salario)
 
-    imprimeReport(joao)
+    ImprimeRelatorioFuncionario.imprime("Analyst",joao)
 }
-
-fun imprimeReport(funcionario: Funcionario) = println(funcionario.toString())
 /*
     val john = Pessoa(nome = "Rubens", cpf = "192.168.084-90")
     //john.cpf = "192.192.292-90"  // private set impede de isso ser aceito
